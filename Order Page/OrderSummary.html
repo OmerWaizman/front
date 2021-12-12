@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="OrderSummary.js"></script>
+    <link rel="stylesheet" type="text/css" href="OrderSummary.css">
+    <meta charset="utf-8" />
+    <title>Order Page</title>
+</head>
+
+
+<body>
+    <div id="HomepageGrid">
+
+        <div id="header">
+            <div id="logo">
+                <p style="text-align:center;"><img src="מליכה.jpg" alt="Logo" width="250" height="100"></p>
+            </div>
+            <div id="log-in">
+                <div class="topleft">
+                    <a href="../Forms/Log-in/log-in.html">
+                        <p style="text-align:left"><img src="log-in.png" alt="log-in/Sign in" width="100" height="100" /></p>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="topnav">
+                <p style="text-align:center;">
+                    <a href="../Homepage/Homepage.html">Home</a>
+                    <a href="#new">New</a>
+                    <a href="#sale">Sale</a>
+                    <a href="../Selction Page/Selection Page.html">Clothing</a>
+                    <a href="#accessories">Accessories</a>
+                    <a href="#sale">Hot</a>
+                </p>
+            </div>
+        </div>
+        <!-- Order Form -->
+        <!-- Personal Details -->
+        <div class="order-grid">
+            <form style="margin: 0; padding: 0;">
+                <h1>Personal Details</h1>
+                <div class="input">
+                    <p>Full name:</p> <input type="email" id="fullname" name="email" value="" placeholder="Full Name">
+                    <p>City:</p> <input type="email" id="city" name="email" value="" placeholder="City">
+                    <p>Street:</p> <input type="email" name="email" value="" placeholder="Street">
+                    <p>Number:</p> <input type="email" name="email" value="" placeholder="Number">
+                    <p>Floor:</p> <input type="email" name="email" value="" placeholder="Floor">
+                    <p>Appartment:</p> <input type="email" name="email" value="" placeholder="Appartment">
+                    <p>Zip code:</p> <input type="email" id="zipcode" name="email" value="" placeholder="Zip">
+                    <p>Phone number:</p> <input type="email" id="phonenumber" name="email" value="" placeholder="Phone number">
+                    <p>Email:</p><input type="email" name="email" id="email" value="" placeholder="Email">
+                    <br></br>
+                </div>
+
+            </form>
+
+        </div>
+        <!-- Payments Details -->
+        <div class="order-grid">
+            <form style="margin: 0; padding: 0;">
+                <h1>Payment Details</h1>
+                <div class="input">
+                    <p>Card Number:</p> <input type="cardnumber" id="cardnumber" name="cardnumber" value="" placeholder="Card Number">
+                    <p>Experation Date:</p> <input type="experationdate" name="experationdate" value="" placeholder="Experation Date">
+                    <p>CCV:</p> <input type="ccv" name="ccv" id="ccv" value="" placeholder="CCV">
+                    <p>Card Holder ID:</p> <input type="holderID" id="CHID" name="holderID" value="" placeholder="Card Holder ID">
+                    <br></br>
+                </div>
+                <!-- Delivery Method -->
+
+                <h1>Delivery Method</h1>
+                <input type="radio" id="Pickup" name="deliverymethod" value="pickup">
+                <label for="Pickup">Pickup Yourself (Free)</label><br>
+                <input type="radio" id="carrier" name="deliverymethod" value="carrier">
+                <label for="carrier">Carrier Service | 1-3 days (50 Shekels)</label><br>
+                <input type="radio" id="postmail" name="deliverymethod" value="postmail" checked="checked">
+                <label for="postmail">Isreal Post Service | 3-7 days (20 Shekels)</label>
+                <!-- Coupon/Gift Details -->
+                <h1>Coupon/Gift Card</h1>
+                <div class="input">
+                    <p>Coupon Code:</p> <input type="coupon" name="coupon" id="coupon" value="" placeholder="">
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Order Summary -->
+        <div>
+            <h1>Order Summary</h1>
+            <p> Item 1 - 30₪ </p> <p> Item 2 - 50₪</p><p> Item 3 - 70₪</p><p> Item 4 - 100₪ </p><p> Item 5 - 200₪</p>
+            <hr>
+            <p> <b>Total: 450₪</b> </p>
+
+            <div class="button">
+                <button type="submit"
+                        onclick="VarifyInput(
+                    document.getElementById('fullname').value,
+                    document.getElementById('city').value,
+                    document.getElementById('zipcode').value,
+                    document.getElementById('phonenumber').value,
+                    document.getElementById('email').value,
+                    document.getElementById('cardnumber').value,
+                    document.getElementById('ccv').value,
+                    document.getElementById('CHID').value,
+                    document.getElementById('coupon').value,
+                    )">
+                    Complete Order
+                </button>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- End of Order Form -->
+
+        <div id="bottom">
+            <div class="bottomnav">
+                <p style="text-align:center;">
+                        <a class="active" href="../Forms/Contact-Us/contact_us.html" target="_blank">Contact Us</a>
+                        <a href=../Forms/About-Us/about_us.html target="_blank">About Us</a>
+                        <a href="#CancelationPolicy">Cancelation Policy</a>
+                        <a href="#Newsletter">Our Newsletter</a>
+                </p>
+            </div>
+        </div>
+</body>
+</html>
